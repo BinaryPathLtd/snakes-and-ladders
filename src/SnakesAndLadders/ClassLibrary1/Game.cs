@@ -11,7 +11,7 @@ namespace Domain
 
         public void Start()
         {
-            this.Players[0] = new Player();
+            this.Players[0] = new Player(1);
         }
     }
 }
