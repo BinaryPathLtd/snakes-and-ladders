@@ -13,5 +13,10 @@ namespace Domain
         {
             this.Players[0] = new Player(1);
         }
+
+        public bool HasBeenWon()
+        {
+            return true;
+        }
     }
 }
