@@ -12,5 +12,10 @@ namespace Domain
             get => 1;
             private set { }
         }
+
+        public void Move(int i)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
