@@ -16,10 +16,5 @@ namespace Domain
         {
             this.Players[0] = new Player(1, boardSize);
         }
-
-        public bool HasBeenWon()
-        {
-            return true;
-        }
     }
 }

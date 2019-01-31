@@ -29,15 +29,7 @@ namespace Tests
             //AndPlayerWinsGame
             Assert.That(game.Players?.First().HasWonGame(), Is.EqualTo(true));
         }
-
-        /*
-         *
-         * Given the token is on square 97
-When the token is moved 4 spaces
-Then the token is on square 97
-And the player has not won the game
-         */
-
+        
         [Test]
         public void GivenTokenOnSquare97_WhenMoving4Spaces_ThenPlayerHasNotWonGame()
         {
