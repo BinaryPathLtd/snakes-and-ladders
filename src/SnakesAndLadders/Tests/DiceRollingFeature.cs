@@ -18,13 +18,13 @@ So that there is an element of chance in the game")]
             var playerCount = 1;
             var game = new Game(boardSize, playerCount);
             game.Start();
-            game.Players?.First().Move(96);
+
             //WhenPlayerRollsDie
             game.Players?.First().RollDie();
 
             //ThenResultsShouldBeBetween1And6
-            Assert.That(game.Players?.First().TokenPosition, Is.GreaterThan(97));
-            Assert.That(game.Players?.First().TokenPosition, Is.LessThan(104));
+            Assert.That(game.Players?.First().TokenPosition, Is.GreaterThan(2));
+            Assert.That(game.Players?.First().TokenPosition, Is.LessThan(8));
         }
     }
 }

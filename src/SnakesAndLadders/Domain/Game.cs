@@ -10,7 +10,7 @@ namespace Domain
             this.Players = new Player[playerCount];
         }
 
-        public Player[] Players { get; set; }
+        public Player[] Players { get; }
 
         public void Start()
         {
