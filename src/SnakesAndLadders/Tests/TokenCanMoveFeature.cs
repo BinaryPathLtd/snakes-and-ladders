@@ -10,7 +10,7 @@ namespace Tests
     public class TokenCanMoveFeature
     {
         [Test]
-        public void GivenGameStarted_WhenTokenPlacedOnBoard_ThenTokenIsOnSquareOne()
+        public void GivenGameStarted_WhenTenPlacedOnBoard_ThenTokenIsOnSquare1()
         {
             //GivenGameStarted
             //WhenTokenPlacedOnBoard
@@ -24,7 +24,7 @@ namespace Tests
         }
 
         [Test]
-        public void GivenPlayerTokenIsOnSquareOne_WhenTokenMovedThreeSpaces_ThenTokenIsOnSquareFour()
+        public void GivenPlayerTokenIsOnSquare1_WhenTokenMovedThr3Spaces_ThenTokenIsOnSquare4()
         {
             //GivenPlayerTokenIsOnSquareOne
             var boardSize = 100;
@@ -41,7 +41,7 @@ namespace Tests
         }
 
         [Test]
-        public void GivenPlayerTokenIsOnSquareOne_WhenTokenMoved3Spaces_AndMoved4Space_ThenTokenPositionIsOnSquareEight()
+        public void GivenPlayerTokenIsOnSquare1_WhenTokenMoved3Spaces_AndMoved4Spaces_ThenTokenPositionIsOnSquare8()
         {
             //GivenPlayerTokenIsOnSquare1
             var boardSize = 100;

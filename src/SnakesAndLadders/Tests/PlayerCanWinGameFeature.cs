@@ -11,7 +11,7 @@ namespace Tests
     public class PlayerCanWinGameFeature
     {
         [Test]
-        public void GivenTokenOnSquareNintySeven_WhenMovingThreeSpaces_ThenTokenIsOnSquare100AndPlayerWinsGame()
+        public void GivenTokenOnSquare97_WhenMoving3Spaces_ThenTokenIsOnSquare100AndPlayerWinsGame()
         {
             //GivenTokenOnSquareNintySeven
             var boardSize = 100;
@@ -25,8 +25,34 @@ namespace Tests
             
             //ThenTokenIsOnSquare100
             Assert.That(game.Players?.First().TokenPosition, Is.EqualTo(100));
+            
             //AndPlayerWinsGame
-            Assert.That(game.HasBeenWon, Is.EqualTo(true));
+            Assert.That(game.Players?.First().HasWonGame(), Is.EqualTo(true));
+        }
+
+        /*
+         *
+         * Given the token is on square 97
+When the token is moved 4 spaces
+Then the token is on square 97
+And the player has not won the game
+         */
+
+        [Test]
+        public void GivenTokenOnSquare97_WhenMoving4Spaces_ThenPlayerHasNotWonGame()
+        {
+            //GivenTokenOnSquare97
+            var boardSize = 100;
+            var playerCount = 1;
+            var game = new Game(boardSize, playerCount);
+            game.Start();
+            game.Players?.First().Move(96);
+            
+            //WhenMoving4Spaces
+            game.Players?.First().Move(4);
+
+            //ThenPlayerHasNotWonGame
+            Assert.That(game.Players?.First().HasWonGame(), Is.EqualTo(false));
         }
     }
 }
