@@ -7,15 +7,11 @@ namespace Domain
             this.TokenPosition = startPosition;
         }
 
-        public int TokenPosition
-        {
-            get => 1;
-            private set { }
-        }
+        public int TokenPosition { get; private set; }
 
-        public void Move(int i)
+        public void Move(int spaces)
         {
-            throw new System.NotImplementedException();
+            this.TokenPosition += spaces;
         }
     }
 }
