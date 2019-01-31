@@ -20,5 +20,11 @@ namespace Domain
         {
             return this.boardSize == this.TokenPosition;
         }
+
+        public void RollDie()
+        {
+            // random number generator to be used here :)
+            this.Move(4);
+        }
     }
 }
